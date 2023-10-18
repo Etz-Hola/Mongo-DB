@@ -2,8 +2,8 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 
 const employeesSchema = new Schema({
-    firstname: {type: stringify, required: true},
-    lastnmae: {type: stringify, required: true}
+    firstname: {type: String, required: true},
+    lastnmae: {type: String, required: true}
 })
 
 const Employee = mongoose.model("Employee", employeesSchema);
