@@ -3,23 +3,22 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
     username: {
-        type: 'String',
-        require: true,
+        type: String,
+        required: true
     },
     roles: {
-        Use: {            
+        User: {   
             type: Number,
             default: 4000
-        },
+        }, 
         Editor: Number,
         Admin: Number
     },
-    // //or
     // role: {
     //     type: String,
-    //     default: 'User'
+    //     default: "User"
     //     //admin, editor
-    // }
+    // },
     password: {
         type: String,
         required: true
@@ -28,5 +27,4 @@ const userSchema = new Schema({
 })
 
 const User = mongoose.model("User", userSchema)
-module.exports = User;
-
+module.exports = User
